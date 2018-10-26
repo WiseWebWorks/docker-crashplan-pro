@@ -1,0 +1,18 @@
+#
+# crashplan-pro Dockerfile
+#
+# https://github.com/WiseWebWorks/docker-crashplan-pro
+#
+
+# Pull base image.
+FROM jlesage/crashplan-pro:latest
+
+VOLUME ["/volume1","/volume2","/volume3","/volume4","/volume5"]
+
+# Metadata.
+LABEL \
+      org.label-schema.name="crashplan-pro" \
+      org.label-schema.description="Docker container for CrashPlan PRO" \
+      org.label-schema.version="unknown" \
+      org.label-schema.vcs-url="https://github.com/WiseWebWorks/docker-crashplan-pro" \
+      org.label-schema.schema-version="1.0"
