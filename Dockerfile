@@ -17,6 +17,7 @@ ARG CRASHPLANPRO_BUILD=951
 #       number:
 # https://download.code42.com/installs/linux/install/CrashPlanSmb/CrashPlanSmb_${CRASHPLANPRO_VERSION}_Linux.tgz
 ARG CRASHPLANPRO_URL=https://web-eam-msp.crashplanpro.com/client/installers/CrashPlanSmb_${CRASHPLANPRO_VERSION}_${CRASHPLANPRO_TIMESTAMP}_${CRASHPLANPRO_BUILD}_Linux.tgz
+ARG JRE_X64_DOWNLOAD_URL=https://download.code42.com/installs/proserver/jre/jre-8u144-linux-x64.tgz
 
 # Define container build variables.
 ARG TARGETDIR=/usr/local/crashplan
