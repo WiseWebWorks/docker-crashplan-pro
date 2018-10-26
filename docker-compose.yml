@@ -1,0 +1,29 @@
+version: '3'
+services:
+  crashplan:
+    build:
+      context: .
+      dockerfile: Dockerfile2
+    image: wisewebworks/docker-crashplan-pro:latest
+    container_name: docker-crashplan-pro
+    hostname: eeyore
+    ports:
+      - "5800:5800"
+      - "5900:5900"
+    volumes:
+      - /volume6/VM/vm-volumes/config:/config
+      - /volume6/VM/vm-volumes/eeyore/volume1:/volume1:ro
+      - /volume6/VM/vm-volumes/eeyore/volume2:/volume2:ro
+      - /volume6/VM/vm-volumes/eeyore/volume3:/volume3:ro
+      - /volume6/VM/vm-volumes/eeyore/volume4:/volume4:ro
+      - /volume6/VM/vm-volumes/eeyore/volume5:/volume5:ro
+      - /volume8:/volume8:ro
+    restart: on-failure
+    environment:
+      - USER_ID=0
+      - GROUP_ID=0
+      - TZ=America/Phoenix
+      - KEEP_APP_RUNNING=1
+      - DISPLAY_WIDTH=1800
+      - DISPLAY_HEIGHT=900
+      - CRASHPLAN_SRV_MAX_MEM=5024M
