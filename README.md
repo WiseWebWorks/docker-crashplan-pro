@@ -945,3 +945,12 @@ Having troubles with the container or have questions? Please
 [create a new issue](https://github.com/jlesage/docker-crashplan-pro/issues).
 
 For other Dockerized applications, visit https://jlesage.github.io/docker-apps.
+
+## Re-create the image
+
+To re-create the image, pull the latest and build using `docker-compose`:
+
+```
+docker pull jlesage/crashplan-pro:latest
+docker-compose up -d --build
+```
